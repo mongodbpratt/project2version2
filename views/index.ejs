@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script defer src="./js/script.js"></script>
+        <title>NEXTGEN Defense</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400&display=swap');
+            input {
+                border: 1;
+                padding: 1px;
+                font-size: 15px;
+                border-color: grey;
+            }
+            input[type="submit"] {
+                background: black;
+                color: white;
+                border-color: cornsilk;
+            }
+            button {
+                background: black;
+                color: white;
+                border-color: cornsilk;
+            }
+            body {
+                background-color: #363334;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                color: blanchedalmond;
+            }
+            a:link{
+                color:white;
+            }
+            a:visited{
+                color: white;
+            }
+            a:hover{
+                color:white;
+            }
+            a:focus{
+                color:white;
+            }
+            a:active{
+                color:white;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap" rel="stylesheet">
+        <title>PBP index</title>
+    </head>
+    <body>
+        <nav><a href="/property/new">Add Assets to your Property Book</a></nav>
+        <h1>Your Property</h1>
+        <ul>
+            <% for(let i = 0; i < property?.length; i++){ %>
+                <li>
+                    <a href="/property/<%=property[i].id; %>">
+                    <img src="<%=property[i].picture; %>" width="50" height="50">
+                        <%=property[i].name; %>
+                    </a>
+                    <br/>
+                    <a href="/property/<%=property[i].id; %>/edit"><button>EDIT</button></a>
+
+                    <form action="/property/<%=property[i].id; %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                    </form>
+                </li> 
+            <% } %>
+        </ul>
+    </body>
+</html>
