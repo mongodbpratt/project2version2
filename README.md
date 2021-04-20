@@ -1,7 +1,7 @@
 PropertyBookProject
 -  by: Will Pratt
 - link: project2version2.heroku.com
-- Given the DOD's desire to account for almost every dollar of government owned property and junior leaders requirement to execute that accountability.
+- Given the DOD's desire to account for almost every dollar of government owned property and junior leaders requirement to execute that accountability, this app is meant to enable those junior leaders to access and edit their property from thair phone and not carry around a phone book sized binder of property records.
 ---
 
 Technology Used:
