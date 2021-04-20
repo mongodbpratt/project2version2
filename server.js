@@ -35,6 +35,10 @@ const Property = require("./models/property.js");
 // // SESSION MIDDLEWARE REGISTRATION (adds req.session property)
 
 // universal code
+
+const PORT = process.env.PORT || "3000"
+const MONGO = process.env.MONGO || "MONGODB_URL"
+
 mongoose.connect(
   "mongodb+srv://bread:bread@cluster0.lftso.mongodb.net/property?retryWrites=true&w=majority",
   {
@@ -43,6 +47,7 @@ mongoose.connect(
     useUnifiedTopology: true,
   }
 );
+
 mongoose.connection.once("open", () => {
   console.log("connected to mongo");
 });
@@ -123,9 +128,6 @@ app.get('/property/:id', (req, res)=>{
   });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Airborne! All the Way!");
 });
-// logs
-// logs/new
-// logs/:id
