@@ -20,4 +20,9 @@ Model
 - primaryhandreceiptholder: String  
 - subhandreceiptholder: String
 - quantity: String
+---
 
+Next Steps
+- Add Authorization
+- Add ability to add photos and geotags from you phone
+- Add abilty to filter and sort by subhandreceipt holder
